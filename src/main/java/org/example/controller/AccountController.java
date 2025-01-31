@@ -21,7 +21,7 @@ public class AccountController {
     }
 
     @GetMapping("/{accountNumber}")
-    public Account getAccount(@PathVariable String accountNumber) {
+    public List<Account> getAccount(@PathVariable String accountNumber) {
         return accountService.getAccountByNumber(accountNumber);
     }
 

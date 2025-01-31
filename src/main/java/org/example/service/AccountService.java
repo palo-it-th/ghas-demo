@@ -5,14 +5,16 @@ import org.example.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AccountService {
 
     @Autowired
     private AccountRepository accountRepository;
 
-    public Account getAccountByNumber(String accountNumber) {
-        return accountRepository.findByAccountNumber(accountNumber);
+    public List<Account> getAccountByNumber(String accountNumber) {
+        return accountRepository.findByAccountNumberVulnerable(accountNumber);
     }
 
     public Account saveAccount(Account account) {
