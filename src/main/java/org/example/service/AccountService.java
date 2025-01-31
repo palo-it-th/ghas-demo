@@ -17,6 +17,11 @@ public class AccountService {
         return accountRepository.findByAccountNumberVulnerable(accountNumber);
     }
 
+    // Sensitive Data Exposure (vulnerability)
+    public void logAccountDetails(Account account) {
+        System.out.println("Account Details: " + account); // Logging sensitive data
+    }
+
     public Account saveAccount(Account account) {
         return accountRepository.save(account);
     }
