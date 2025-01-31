@@ -17,9 +17,18 @@ public class AccountService {
         return accountRepository.findByAccountNumberVulnerable(accountNumber);
     }
 
-    // Sensitive Data Exposure (vulnerability)
-    public void logAccountDetails(Account account) {
-        System.out.println("Account Details: " + account); // Logging sensitive data
+    // Sensitive Data Exposure Through Error Messages
+    public Account getAccountById(Long id) {
+        return accountRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Account not found with ID: " + id + ". Database query: SELECT * FROM Account WHERE id = " + id));
+    }
+
+    // Insecure Bean Validation
+    public Account createAccount(Account account) {
+        if (account.getAccountNumber().length() > 1000) {
+            throw new RuntimeException("Invalid account number length: " + account.getAccountNumber());
+        }
+        return accountRepository.save(account);
     }
 
     public Account saveAccount(Account account) {
