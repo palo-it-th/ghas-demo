@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface AccountRepository extends JpaRepository<Account, Long> {
     // Vulnerable to SQL Injection
-    @Query(value = "SELECT * FROM Account WHERE accountNumber = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM Account WHERE accountNumber = '" + ":accountNumber" + "'", nativeQuery = true)
     Account findByAccountNumber(String accountNumber);
 }
