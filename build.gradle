@@ -21,6 +21,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Vulnerable dependencies
+    implementation 'io.netty:netty-common:4.1.117.Final' // https://github.com/advisories/GHSA-389x-839f-4rhx
+    implementation 'com.amazon.redshift:redshift-jdbc42:2.1.0.31'// https://github.com/advisories/GHSA-8596-2jgr-ppj7 
+    implementation 'org.apache.nifi:nifi-framework-core:1.16.0'  // https://github.com/advisories/GHSA-v3vc-6qcv-4vrx 
 }
 
 tasks.named('test') {
