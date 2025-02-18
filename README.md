@@ -14,6 +14,8 @@ The **[`code-scan.yml`](.github/workflows/code-scan.yml)** GitHub workflow
 - The scan runs on push and pull requests to **`main`** branch.
 - Supports multi-language analysis (Currently Java)
 
+For running CodeQL locally, please refer to the instructions provided in the **[`run-codeql-locally`](./run-codeql-locally.md)** file.
+
 ### 🔑 Secret Scanning
 
 **Objective:** Detect and prevent accidental exposure of **secrets**.
