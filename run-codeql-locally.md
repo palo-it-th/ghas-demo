@@ -30,7 +30,7 @@ codeql pack install ./custom-queries
 
 ## Running Custom CodeQL Queries
 
-To analyze the `db-demo` database using custom Java queries from the [`custom-queries`](custom-queries) folder, run:
+To analyze the `db-demo` database using custom CodeQL queries from the [`custom-queries`](custom-queries) folder, run:
 
 ```shell
 codeql database analyze ./db-demo ./custom-queries --format=sarif-latest --output=./results.sarif

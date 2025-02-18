@@ -41,7 +41,7 @@ GitHub Secret Scanning identifies exposed secrets in the **[`application.propert
 
 1. **Enable GitHub Advanced Security (GHAS)** for this repository.
 2. **Review and configure** the **[`dependabot.yml`](.github/dependabot.yml)** and **[`dependency-submission.yml`](.github/workflows/dependency-submission.yml)** files.
-3. Enable the set up **Code Scanning**.
+3. Enable the set up for **Code Scanning**.
 4. **Monitor security alerts** in the GitHub Security tab.
 
 ---
