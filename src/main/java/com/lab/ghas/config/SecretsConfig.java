@@ -8,7 +8,8 @@ public class SecretsConfig {
     
     // API Keys and Tokens
     public static final String GITHUB_TOKEN = "ghp_xF8k3L9mP2nQ5rT6vW7yZ8aB1cD4eF5gH6i";
-    public static final String STRIPE_API_KEY = "sk_live_51AbCdEfGhIjKlMnOpQrStUvWxYz1234567890";
+    // Removed for demo - was blocked by push protection
+    // public static final String STRIPE_API_KEY = "sk_test_DEMO";
     public static final String OPENAI_API_KEY = "sk-proj-AbCdEfGhIjKlMnOpQrStUvWxYz1234567890";
     
     // Cloud Provider Credentials
@@ -22,12 +23,14 @@ public class SecretsConfig {
     
     // Third-party Service Keys
     public static final String SENDGRID_KEY = "SG.AbCdEfGhIjKlMnOpQrStUv.WxYz1234567890";
-    public static final String TWILIO_SID = "ACabcdef1234567890abcdef1234567890";
-    public static final String TWILIO_TOKEN = "abcdef1234567890abcdef1234567890";
+    // Removed for demo - was blocked by push protection
+    // public static final String TWILIO_SID = "AC_DEMO";
+    // public static final String TWILIO_TOKEN = "demo_token";
     
     // Slack Integration
     public static final String SLACK_WEBHOOK = "https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXX";
-    public static final String SLACK_BOT_TOKEN = "xoxb-1234567890-1234567890123-AbCdEfGhIjKlMnOpQrStUvWx";
+    // Removed for demo - was blocked by push protection
+    // public static final String SLACK_BOT_TOKEN = "xoxb-DEMO";
     
     // Private Keys (Partial for demo)
     public static final String RSA_PRIVATE_KEY = 
