@@ -37,6 +37,13 @@ dependencies {
 	// Real Impact: 60% of Java applications vulnerable, exploited within 48 hours
 	// Dependabot will detect and auto-create PR to upgrade to 5.3.18+
 	implementation 'org.springframework:spring-beans:5.3.16'
+	
+	// 3. NEW VULNERABILITY - Jackson Databind RCE (CVE-2020-36518)
+	// Severity: HIGH | CVSS 7.5
+	// Attack: Remote Code Execution via polymorphic deserialization
+	// Real Impact: Every REST API endpoint becomes vulnerable to gadget chain attacks
+	// THIS WILL BE CAUGHT BY DEPENDABOT IN THE PR!
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.8'
 }
 
 tasks.named('test') {
